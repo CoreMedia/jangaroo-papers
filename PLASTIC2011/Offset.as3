@@ -1,0 +1,22 @@
+package joo.util {
+  public class Offset {
+    public static const HOME :Offset = new Offset(0, 0);
+    public var left :Number;
+    public var top :Number;
+    public  function Offset(left :Number, top :Number) {
+      this.left = left;
+      this.top = top;
+    }
+    public  function clone() :Offset  {
+      return new Offset(left, top);
+    }
+    public  function getDistance() :Number  {
+      return Math.sqrt(left*left + top*top);
+    }
+    public  function scale(factor :Number) :Offset  {
+      return new Offset(left*factor, top*factor);
+    }
+    public  function isHome() :Boolean  {
+      return left==0 && top==0;
+    }
+}}
