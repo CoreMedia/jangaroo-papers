@@ -65,7 +65,7 @@ Jangaroo programs integrate very well with other JavaScript code. All language f
 
 Thus, with ActionScript 3, we add language features to JavaScript which preserve the strengths of JavaScript, ease development, and which can be translated to efficient, debuggable JavaScript 1.5.
 
-Jangaroo is Open Source, and all tools are licensed under the Apache License, Version 2.0 \citep{jangaroo-license}.
+Jangaroo is Open Source, and all tools are licensed under the Apache License, Version 2.0 \citep{joolicense}.
 
 \section{Enterprise JavaScript with Jangaroo}
 
@@ -79,19 +79,19 @@ Static typing is of great help when defining and using an API, and it greatly en
 
 \section{ECMAScript Evolution}
 
-There have been several attempts to integrate all these language concepts into the JavaScript language specification. Quoting Brendan Eich, the creator of JavaScript:
+There have been several attempts to integrate all these language concepts into the JavaScript language specification. Quoting Brendan Eich, the creator of Java\-Script:
 
 \begin{quotation}
 The over-minimized design of JS [...] imposed a long-term complexity tax on JS programmers and libraries. Everyone invents an OOP framework, some standard packaging discipline, and a latent type system. Why should not the core language address these obvious requirements?\citep{Eich2007-comment-open-letter}
 \end{quotation}
 
-First published by Netscape as JavaScript 2.0, an ECMAScript 4 specification\citep{ecmascript4} was on its way, formalizing many aspects of ActionScript 3. However, the standardization committee was not able to reach consensus, and ECMAScript 4 was finally abandoned. Some of the work might be incorporated into the foundation of a new specification project (code name \emph{ECMAScript Harmony}\citep{Eich2008-es-discuss}) which might be completed after ECMAScript 5.  The ECMAScript 5 specification\citep{ecma262-5.1} has been approved in 2009; the latest update in June 2011 is called version 5.1.
+First published by Netscape as JavaScript 2.0, an ECMAScript 4 specification\citep{ecmascript4} was on its way, formalizing many aspects of ActionScript 3. However, the standardization committee was not able to reach consensus, and ECMAScript 4 was finally abandoned. Some of the work might be incorporated into the foundation of a new specification project (code name \emph{ECMAScript Harmony}\citep{Eich2008-es-discuss}) which might be completed after ECMAScript 5.  The ECMAScript 5 spec\-i\-fi\-ca\-tion\citep{ecma262-5.1} has been approved in 2009; the latest update in June 2011 is called version 5.1.
 
 \section{Translating ActionScript 3 to JavaScript}
 
-The ActionScript 3 tool set available from Adobe is an implementation of the ECMAScript 3 standard\citep{ecma262-3rd}. This means that ActionScript 3 is a superset of JavaScript as it is available in all major browsers. Unfortunately, there is no formal syntax and semantics available for ActionScript 3’s language extensions beyond the standard. We had to rely on the non-formal AS3 language description\citep{actionscript-reference} and the Adobe compiler itself\citep{mxmlc} as the de-facto reference implementation.
+The ActionScript 3 tool set available from Adobe is an implementation of the ECMAScript 3 standard\citep{ecma262-3rd}. This means that ActionScript 3 is a superset of Java\-Script as it is available in all major browsers. Unfortunately, there is no formal syntax and semantics available for ActionScript 3’s language extensions beyond the standard. We had to rely on the non-formal AS3 language description\citep{actionscript-reference} and the Adobe compiler itself\citep{mxmlc} as the de-facto reference implementation.
 
-One of the main goals of the Jangaroo project was to facilitate re-use of existing tools. This includes IDE support for ActionScript 3 which is already widespread\citep{jangaroo-wiki}, as well as the re-use of existing JavaScript debuggers (e.g. Firebug\citep{firefox-firebug-plugin}). While it is certainly possible to use a standard JavaScript debugger to debug any program which has been translated to JavaScript, debugging is much easier if the generated JavaScript code looks similar to the original program. The Jangaroo compiler achieves this by keeping all whitespace of the original program, including line feeds, and by generating JavaScript code which is structurally similar to the original ActionScript, delegating some work to the Jangaroo runtime. For instance, visibility modifiers like \texttt{public} and \texttt{private} stay where they are, but are merely surrounded by string quotes. The Jangaroo runtime then takes care of implementing the correct visibility of the corresponding field or method.
+One of the main goals of the Jangaroo project was to facilitate re-use of existing tools. This includes IDE support for ActionScript 3 which is already widespread\citep{jwiki}, as well as the re-use of existing JavaScript debuggers (e.g. Firebug\citep{firefox-firebug-plugin}). While it is certainly possible to use a standard JavaScript debugger to debug any program which has been translated to JavaScript, debugging is much easier if the generated JavaScript code looks similar to the original program. The Jangaroo compiler achieves this by keeping all whitespace of the original program, including line feeds, and by generating JavaScript code which is structurally similar to the original ActionScript, delegating some work to the Jangaroo runtime. For instance, visibility modifiers like \texttt{public} and \texttt{private} stay where they are, but are merely surrounded by string quotes. The Jangaroo runtime then takes care of implementing the correct visibility of the corresponding field or method.
 
 As an example of the similarity of ActionScript source code with the JavaScript code generated by the Jangaroo compiler, consider the sample ActionScript class from Listing \ref{joocinput}. From this source code, the Jangaroo compiler generates the output in Listing \ref{joocoutput}.
 
@@ -135,12 +135,12 @@ columns=fixed,
 showstringspaces=false} % no special string spac
 
 \lstinputlisting[label=joocinput,float=*,
-language=JavaScript,
+language=JavaScript,captionpos=b,
 caption=Sample Jangaroo Compiler Input
 ]{Offset.as3}
 
 \lstinputlisting[label=joocoutput,float=*,
-language=JavaScript,
+language=JavaScript,captionpos=b,
 caption=Sample Jangaroo Compiler Output
 ]{Offset.js}
 
@@ -150,7 +150,7 @@ While the original Adobe ActionScript 3 compiler is hand-written, the Jangaroo c
 
 To support AS3 features not present in JavaScript, Jangaroo compiler and runtime have to cooperate. Some features like private member declarations are handed through as strings and interpreted by the Jangaroo runtime, while e.g. imports and parameter initializers are resolved by the compiler and lead to generated JavaScript code within methods.
 
-A feature where compiler and runtime contribute is private member access. While we are aware of techniques to implement real information hiding in JavaScript, e.g. the approach described by Crockford\citep{Crockford2001-private.members}, we chose to implement a more straight-forward solution to reduce complexity and increase runtime performance. Jangaroo’s approach satisfies the most important reason to use private members when building frameworks, namely to avoid name clashes between framework classes and custom subclasses. Jangaroo simply renames private members by suffixing them with '\$' followed by the class inheritance level, so that private members can never name clash with a private member of a super class. The only downside is that regular member names are limited not to end with '\$' followed by an integer. Compiler and runtime work together on implementing this naming scheme. While the compiler rewrites private member names by suffixing them with the inheritance level to avoid name clashes, the runtime stores private members using the same name mapping.
+A feature where compiler and runtime contribute is private member access. While we are aware of techniques to implement real information hiding in JavaScript, e.g. the approach described by Crock\-ford\citep{Crockford2001-private.members}, we chose to implement a more straight-forward solution to reduce complexity and increase runtime performance. Jangaroo’s approach satisfies the most important reason to use private members when building frameworks, namely to avoid name clashes between framework classes and custom subclasses. Jangaroo simply renames private members by suffixing them with '\$' followed by the class inheritance level, so that private members can never name clash with a private member of a super class. The only downside is that regular member names are limited not to end with '\$' followed by an integer. Compiler and runtime work together on implementing this naming scheme. While the compiler rewrites private member names by suffixing them with the inheritance level to avoid name clashes, the runtime stores private members using the same name mapping.
 
 Even AS3 annotations are supported by Jangaroo. To ease parsing them at runtime, the compiler translates annotations into JavaScript object literals. The runtime uses the top-level properties to dispatch to functions implementing the adequate runtime behavior intended by the annotation. Another ActionScript language semantics Jangaroo simulates is triggering execution of static code correctly. Similar to Java, static code contained in ActionScript classes is executed when the class is first used. Thus, the Jangaroo compiler wraps all static code into functions that are collected by the runtime to execute when the class is initialized. Furthermore, the runtime intercepts the constructor and all static methods to initialize the containing class when called for the first time.
 
@@ -168,14 +168,15 @@ Note that although a war is a standard packaging type for Java web applications,
 
 \subsection{IDEs}
 
-Jangaroo applications can be developed with any \\
-ActionScript-capable IDE like FlashDevelop\citep{FlashDevelop}, \\
-Adobe Flash Builder\citep{FlashBuilder}, Eclipse/axdt\citep{axdt}, \\
-Powerflasher FDT\citep{fdt}, or IntelliJ IDEA Ultimate \\
-Edition\citep{idea} and use the command line for compiling and packaging the application with Maven. However, the project still has to be set up by hand (source path, libraries, external commands, etc.) and in the worst case, when compiling, one has to navigate to compile errors manually.
+Jangaroo applications can be developed with any
+Ac\-tion\-Script-capable IDE like FlashDevelop\citep{FlashDevelop},
+Adobe Flash Builder\citep{flabui}, Eclipse/axdt\citep{axdt},
+IntelliJ IDEA Ultimate Edition\citep{idea}, or
+Powerflasher FDT\citep{fdt}
+and use the command line for compiling and packaging the application with Maven. However, the project still has to be set up by hand (source path, libraries, external commands, etc.) and in the worst case, when compiling, one has to navigate to compile errors manually.
 
 To provide an optimal developer experience, Jangaroo offers two better solutions. It provides a project template and set up instructions for FlashDevelop, and a full-featured plugin for IntelliJ IDEA Ultimate 9 to 10.5.
-Further details can be found in the Jangaroo Wiki\citep{jangaroo-wiki}.
+Further details can be found in the Jangaroo Wiki\citep{jwiki}.
 
 \subsection{ASDoc}
 
@@ -195,13 +196,13 @@ The fact that ActionScript 3 is actually a superset of JavaScript is a big advan
 
 Representatives of another approach consist of a virtual machines implemented in JavaScript, interpreting the same byte code as their plug-in relatives. As of today, Google's Swiffy\citep{swiffy} and Gordon\citep{gordon} simulate only a very old and limited version of the Flash player virtual machine (version 8). 
 
-Mascara\citep{mascara} and haXe\citep{haxe}, like Jangaroo, start with source languages that provide extensions to JavaScript similar to ActionScript, and compile these to JavaScript. The disadvantage is that both languages – ECMAScript 4 (Mascara) and haXe's proprietary language – are not widely supported by development tools. ActionScript 3, on the other hand, has broad tool support, which even improved since Adobe introduced Flex\citep{flex}. 
+Mascara\citep{mascara} and haXe\citep{haxe}, like Jangaroo, start with source languages that provide extensions to JavaScript similar to ActionScript, and compile these to Java\-Script. The disadvantage is that both languages – ECMAScript 4 (Mascara) and haXe's proprietary language – are not widely supported by development tools. ActionScript 3, on the other hand, has broad tool support, which even improved since Adobe introduced Flex\citep{flex}. 
 
 \section{Outlook}
 
 Although ECMAScript 5 did not introduce classes or packages, and it is unlikely to do so in successor versions within the next few years, the enhancements in recent versions of JavaScript even before ECMAScript 5 help simulating ActionScript 3 features. The latest versions of all major browsers now fully support control over properties: accessors (getter/setter functions), custom non-enumerable properties, and read-only properties. ECMAScript 5's \emph{frozen objects} help to simulate AS3 classes more accurately. Thus, Jangaroo will not become dispensable, but on the contrary, it will be possible to approach full support for ActionScript 3 in modern browsers. 
 
-So far, Jangaroo is proposed mainly as a better way to implement frameworks and large scale software that targets JavaScript environments. But several experimental applications\citep{jangaroo-applications} show that original AS3 code can – with very few to no changes – be compiled and run in the browser, too. Besides supporting the language, Jangaroo also supports a subset of the Flash libraries with the JooFlash project\citep{jangaroo-libraries-wiki}. The closer Jangaroo gets to full AS3 support, the more ActionScript frameworks and applications can easily be ported to run directly in the browser and seamlessly interact with JavaScript code.
+So far, Jangaroo is proposed mainly as a better way to implement frameworks and large scale software that targets JavaScript environments. But several experimental applications\citep{jangaroo-applications} show that original AS3 code can – with very few to no changes – be compiled and run in the browser, too. Besides supporting the language, Jangaroo also supports a subset of the Flash libraries with the JooFlash project\citep{jlwiki}. The closer Jangaroo gets to full AS3 support, the more ActionScript frameworks and applications can easily be ported to run directly in the browser and seamlessly interact with JavaScript code.
 
 Another recent trend is to run JavaScript outside of the browser, for example in Web servers (Node.js\citep{nodejs}, a pioneer was Helma\citep{helma}). The most obvious advantage is that client and server use the same language and can share or even exchange code. Obviously, Jangaroo can be applied in this domain as well, so that both client and server would be implemented in ActionScript. Considering the large and growing number of APIs offered in a server context, working with static typing can be especially helpful here.
 
