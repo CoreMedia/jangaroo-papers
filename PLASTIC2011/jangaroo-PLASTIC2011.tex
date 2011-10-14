@@ -148,7 +148,7 @@ While the original Adobe ActionScript 3 compiler is hand-written, the Jangaroo c
 
 \section{Simulation of ActionScript 3 language features in JavaScript}
 
-To support ActionScript 3 features not present in JavaScript, Jangaroo compiler and runtime have to cooperate. Some features like private member declarations are handed through as strings and interpreted by the Jangaroo runtime, while e.g. imports and parameter initializers are resolved by the compiler and lead to generated JavaScript code within methods.
+To support ActionScript 3 features not present in Java\-Script, Jangaroo compiler and runtime have to co\-operate. Some features like private member declarations are handed through as strings and interpreted by the Jangaroo runtime, while e.g. imports and parameter initializers are resolved by the compiler and lead to generated JavaScript code within methods.
 
 A feature where compiler and runtime contribute is private member access. While we are aware of techniques to implement real information hiding in JavaScript, e.g. the approach described by Crock\-ford\citep{Crockford2001-private.members}, we chose to implement a more straight-forward solution to reduce complexity and increase runtime performance. Jangaroo’s approach satisfies the most important reason to use private members when building frameworks, namely to avoid name clashes between framework classes and custom subclasses. Jangaroo simply renames private members by suffixing them with '\$' followed by the class inheritance level, so that private members can never name clash with a private member of a super class. The only downside is that regular member names are limited not to end with '\$' followed by an integer. Compiler and runtime work together on implementing this naming scheme. While the compiler rewrites private member names by suffixing them with the inheritance level to avoid name clashes, the runtime stores private members using the same name mapping.
 
@@ -196,7 +196,7 @@ The fact that ActionScript 3 is actually a superset of JavaScript is a big advan
 
 Representatives of another approach consist of a virtual machines implemented in JavaScript, interpreting the same byte code as their plug-in relatives. As of today, Google's Swiffy\citep{swiffy} and Gordon\citep{gordon} simulate only a very old and limited version of the Flash player virtual machine (version  8). 
 
-Mascara\citep{mascara} and haXe\citep{haxe}, like Jangaroo, start with source languages that provide extensions to JavaScript similar to ActionScript, and compile these to Java\-Script. The disadvantage is that both languages – ECMAScript 4 (Mascara) and haXe's proprietary language – are not widely supported by development tools. ActionScript 3, on the other hand, has broad tool support, which even improved since Adobe introduced Flex\citep{flex}. 
+Mascara\citep{mascara} and haXe\citep{haxe}, like Jangaroo, start with source languages that provide extensions to JavaScript similar to ActionScript, and compile these to Java\-Script. The disadvantage is that both languages,  ECMAScript 4 (Mascara) and haXe's proprietary language, are not widely supported by development tools. ActionScript 3, on the other hand, has broad tool support, which even improved since Adobe introduced Flex\citep{flex}. 
 
 \section{Outlook}
 
