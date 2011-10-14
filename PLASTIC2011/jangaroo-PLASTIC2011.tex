@@ -69,7 +69,7 @@ Jangaroo is Open Source, and all tools are licensed under the Apache License, Ve
 
 \section{Enterprise JavaScript with Jangaroo}
 
-Jangaroo implements a large subset of ActionScript 3 features, including those which are most valuable if a project is getting larger: classes, packages, private members, and static typing.
+Jangaroo implements a large subset of ActionScript 3 (AS3) features, including those which are most valuable if a project is getting larger: classes, packages, private members, and static typing.
 
 Classes and packages are a well understood concept for structuring programs. Virtually every JavaScript framework out there provides some proprietary mechanism to imitate something like classes, inherit from a superclass, do a super call, and to structure classes into a hierarchical namespace. There is typically no tool support for these extensions, although some JavaScript debuggers begin to learn about the class implementations of some of the more popular frameworks\citep{firebug-plugin-illuminations}.
 
@@ -186,7 +186,7 @@ While existing Maven integrations of ASDoc cannot be reused as they are fully in
 
 \section{Related Work}
 
-There are a number of other projects providing support of high-level language within the browser. Roughly, these might be classified by the high-level language chosen (e.g. Java, C\#, ActionScript3), and by the way it is implemented (either by a browser plug-in or by translating to JavaScript). The following table summarizes the approaches we are aware of within this solution space.
+There are a number of other projects providing support of high-level language within the browser. Roughly, these might be classified by the high-level language chosen (e.g. Java, C\#, ActionScript\ 3), and by the way it is implemented (either by a browser plug-in or by translating to JavaScript). The following table summarizes the approaches we are aware of within this solution space.
 
 \vspace{20pt}
 \includegraphics[width=80mm,height=40mm]{TechnologyMatrix.png}
@@ -194,7 +194,7 @@ There are a number of other projects providing support of high-level language wi
 
 The fact that ActionScript 3 is actually a superset of JavaScript is a big advantage compared to other tools which target a different high level language like Java or C\#. Here, the high level language is semantically so far away from JavaScript that either a browser plug-in is needed (providing a dedicated virtual machine for execution), or JavaScript code is generated so cryptic that it can only be debugged effectively when using proprietary tools. Also, the semantic gap between the high level language and JavaScript is so wide that only a quite restricted subset of the high level language can be supported if translating to JavaScript. Last but not least, the more the source language differs from JavaScript, the more likely it is that compilation results in inefficient, bloated code that does not use the strengths of JavaScript.
 
-Representatives of another approach consist of a virtual machines implemented in JavaScript, interpreting the same byte code as their plug-in relatives. As of today, Google's Swiffy\citep{swiffy} and Gordon\citep{gordon} simulate only a very old and limited version of the Flash player virtual machine (version 8). 
+Representatives of another approach consist of a virtual machines implemented in JavaScript, interpreting the same byte code as their plug-in relatives. As of today, Google's Swiffy\citep{swiffy} and Gordon\citep{gordon} simulate only a very old and limited version of the Flash player virtual machine (version\ 8). 
 
 Mascara\citep{mascara} and haXe\citep{haxe}, like Jangaroo, start with source languages that provide extensions to JavaScript similar to ActionScript, and compile these to Java\-Script. The disadvantage is that both languages – ECMAScript 4 (Mascara) and haXe's proprietary language – are not widely supported by development tools. ActionScript 3, on the other hand, has broad tool support, which even improved since Adobe introduced Flex\citep{flex}. 
 
@@ -208,9 +208,9 @@ Another recent trend is to run JavaScript outside of the browser, for example in
 
 \appendix
 
-%\acks
+\acks
 
-%TODO Acknowledgments, if needed.
+We thank our colleagues Dennis Homann and Olaf Kummer for helpful comments and suggestions on earlier versions of this paper.
 
 % alternatives: abbrvnat unsrtnat plainnat
 \bibliographystyle{unsrtnat}
