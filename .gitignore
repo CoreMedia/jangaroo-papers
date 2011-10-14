@@ -18,4 +18,11 @@ analyticslogsolr/
 # Logging:
 *.log
 *.out
+# LaTex:
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.ps
 
