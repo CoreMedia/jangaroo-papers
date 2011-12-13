@@ -1,0 +1,160 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[as3()]{as3-overview}
+{ActionScript 3 Overview}.
+\newblock URL
+  \url{http://www.adobe.com/devnet/actionscript/articles/actionscript3_overview.html}.
+
+\bibitem[avm()]{avm2}
+{Adobe Virtual Machine 2 (AVM2)}.
+\newblock URL
+  \url{http://www.adobe.com/content/dam/Adobe/en/devnet/actionscript/articles/avm2overview.pdf}.
+
+\bibitem[fla()]{flashplayer}
+{Adobe Flash Player}.
+\newblock URL \url{http://www.adobe.com/products/flashplayer}.
+
+\bibitem[air()]{air}
+Adobe {AIR}.
+\newblock URL \url{http://www.adobe.com/products/air}.
+
+\bibitem[joo()]{joolicense}
+{Jangaroo License}.
+\newblock URL \url{http://www.jangaroo.net/home/license.html}.
+
+\bibitem[Roussey()]{firebug-plugin-illuminations}
+Steven Roussey.
+\newblock {Firebug plug-in "Illuminations"}.
+\newblock URL \url{http://www.illuminations-for-developers.com}.
+
+\bibitem[ide()]{idea}
+{IntelliJ IDEA Ultimate Edition}.
+\newblock URL \url{http://www.jetbrains.com/idea}.
+
+\bibitem[Eich(2007)]{Eich2007-comment-open-letter}
+Brendan Eich.
+\newblock {Comment to "An open letter to Chris Wilson"}, 2007.
+\newblock URL
+  \url{http://brendaneich.com/2007/10/open-letter-to-chris-wilson/#comment-583}.
+
+\bibitem[ecm()]{ecmascript4}
+{ECMAScript 4 Specification (abandoned)}.
+\newblock URL \url{http://www.ecmascript.org/es4/spec/overview.pdf}.
+
+\bibitem[Eich(2008)]{Eich2008-es-discuss}
+Brendan Eich.
+\newblock es-discuss {ECMAScript mailing list}, 2008.
+\newblock URL
+  \url{https://mail.mozilla.org/pipermail/es-discuss/2008-August/006837.html}.
+
+\bibitem[ecm(2011)]{ecma262-5.1}
+Ecma-262, {ECMAScript Language Specification, 5.1 Edition}, June 2011.
+\newblock URL
+  \url{http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf}.
+
+\bibitem[ecm(1999)]{ecma262-3rd}
+Ecma-262, {ECMScript Language Specification, 3rd Edition}, December 1999.
+\newblock URL
+  \url{http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%203rd%20edition,%20December%201999.pdf}.
+
+\bibitem[act()]{actionscript-reference}
+{ActionScript 3.0 Reference for the Adobe Flash Platform}.
+\newblock URL
+  \url{http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3}.
+
+\bibitem[mxm()]{mxmlc}
+{mxmlc Compiler, part of the Flex SDK}.
+\newblock URL \url{http://opensource.adobe.com/wiki/display/flexsdk/Flex+SDK}.
+
+\bibitem[jwi()]{jwiki}
+{Jangaroo Wiki}.
+\newblock URL \url{https://github.com/CoreMedia/jangaroo-tools/wiki}.
+
+\bibitem[fir()]{firefox-firebug-plugin}
+{Firebug Firefox Plugin}.
+\newblock URL \url{http://getfirebug.com}.
+
+\bibitem[jfl()]{jflex}
+{JFlex Scanner Generator}.
+\newblock URL \url{http://jflex.de}.
+
+\bibitem[cup()]{cup}
+{CUP Parser Generator}.
+\newblock URL \url{http://www2.cs.tum.edu/projects/cup}.
+
+\bibitem[Crockford(2001)]{Crockford2001-private.members}
+Douglas Crockford.
+\newblock {Private Members in JavaScript}, 2001.
+\newblock URL \url{http://javascript.crockford.com/private.html}.
+
+\bibitem[ext()]{ext-core}
+{Ext Core JavaScript Framework}.
+\newblock URL \url{http://www.sencha.com/products/extcore}.
+
+\bibitem[mav()]{maven}
+{Apache Maven Build Tool}.
+\newblock URL \url{http://maven.apache.org}.
+
+\bibitem[Fla()]{FlashDevelop}
+{FlashDevelop open source source code editor}.
+\newblock URL \url{http://www.flashdevelop.org}.
+
+\bibitem[fla()]{flabui}
+{Adobe Flash Builder}.
+\newblock URL \url{http://www.adobe.com/de/products/flash-builder.html}.
+
+\bibitem[axd()]{axdt}
+{axdt Eclipse plugin}.
+\newblock URL \url{http://axdt.org}.
+
+\bibitem[fdt()]{fdt}
+{Powerflasher FDT development environment for ActionScript, MXML and haXe}.
+\newblock URL \url{http://www.fdt.powerflasher.com}.
+
+\bibitem[asd()]{asdoc}
+{About the ASDoc tool, Adobe Flex 4.5}.
+\newblock URL
+  \url{http://help.adobe.com/en_US/flex/using/WSd0ded3821e0d52fe1e63e3d11c2f44bb7b-7fef.html}.
+
+\bibitem[swi()]{swiffy}
+{Google Swiffy Flash SWF to HTML5 converter}.
+\newblock URL \url{http://swiffy.googlelabs.com}.
+
+\bibitem[gor()]{gordon}
+Gordon javascript flash vm.
+\newblock URL \url{{https://github.com/tobeytailor/gordon}}.
+
+\bibitem[mas()]{mascara}
+{Mascara Compiler}.
+\newblock URL \url{http://www.mascaraengine.com}.
+
+\bibitem[hax()]{haxe}
+{HaXe Programming Language}.
+\newblock URL \url{http://haxe.org}.
+
+\bibitem[fle()]{flex}
+{Adobe Flex}.
+\newblock URL \url{http://www.adobe.com/products/flex}.
+
+\bibitem[jan()]{jangaroo-applications}
+{Jangaroo Applications}.
+\newblock URL \url{http://www.jangaroo.net/applications}.
+
+\bibitem[jlw()]{jlwiki}
+{Jangaroo Libraries Wiki}.
+\newblock URL \url{https://github.com/CoreMedia/jangaroo-libs/wiki/Overview}.
+
+\bibitem[nod()]{nodejs}
+{Node.js Server-side JavaScript Framework}.
+\newblock URL \url{http://nodejs.org}.
+
+\bibitem[hel()]{helma}
+{Helma Server-side Javascript Environment and Web Application Framework}.
+\newblock URL \url{http://helma.org}.
+
+\end{thebibliography}
