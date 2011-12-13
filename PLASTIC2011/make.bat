@@ -1,4 +1,4 @@
-pdflatex .\jangaroo-PLASTIC2011.tex
-bibtex .\jangaroo-PLASTIC2011.aux
-pdflatex .\jangaroo-PLASTIC2011.tex
-pdflatex .\jangaroo-PLASTIC2011.tex
+pdflatex .\plas04-gawecki.tex
+bibtex .\plas04-gawecki.aux
+pdflatex .\plas04-gawecki.tex
+pdflatex .\plas04-gawecki.tex
